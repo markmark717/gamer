@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>God Sim: Phaser Engine</title>
+    <title>Neon God</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.80.1/phaser.min.js"></script>
 </head>
 <body>
     <div id="ui-layer">
+        <div class="hud">
+            <div class="stat">Flock: <span id="flock-count" style="color: #00e5ff;">0</span></div>
+            <div class="stat">Mana: <span id="mana-count" style="color: #bc13fe;">100</span></div>
+            <div class="stat">Wave: <span id="wave-count" style="color: #ff0055;">1</span></div>
+        </div>
+        
         <div class="panel">
-            <h1>Apex God Sim</h1>
-            <p>WebGL / Phaser 3 Engine</p>
+            <h1>Neon God</h1>
             <div class="tools">
-                <button class="tool-btn active" data-tool="spawn">🚶 Spawn Explorer</button>
-                <button class="tool-btn" data-tool="smite">⚡ Divine Strike</button>
-                <button class="tool-btn" data-tool="meteor">☄️ Meteor Swarm</button>
+                <button class="tool-btn active" data-tool="spawn" data-cost="20">
+                    <span>🔵 Spawn Follower</span> <span class="cost">20 Mana</span>
+                </button>
+                <button class="tool-btn" data-tool="smite" data-cost="10">
+                    <span>⚡ Smite Demon</span> <span class="cost">10 Mana</span>
+                </button>
+                <button class="tool-btn" data-tool="nova" data-cost="50">
+                    <span>💥 Holy Nova</span> <span class="cost">50 Mana</span>
+                </button>
             </div>
             <div class="instructions">
-                Right-Click + Drag to Pan<br>
-                Scroll Wheel to Zoom
+                Followers generate Mana.<br>Demons hunt Followers.<br>Protect the flock.
             </div>
         </div>
     </div>
+    
+    <div id="game-over" class="hidden">
+        <h2>THE FLOCK IS DEAD</h2>
+        <button onclick="location.reload()">Restart Simulation</button>
+    </div>
 
     <div id="game-container"></div>
-
     <script src="game.js"></script>
 </body>
 </html>
