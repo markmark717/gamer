@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Sim: Phaser Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.80.1/phaser.min.js"></script>
+</head>
+<body>
+    <div id="ui-layer">
+        <div class="panel">
+            <h1>Apex God Sim</h1>
+            <p>WebGL / Phaser 3 Engine</p>
+            <div class="tools">
+                <button class="tool-btn active" data-tool="spawn">🚶 Spawn Explorer</button>
+                <button class="tool-btn" data-tool="smite">⚡ Divine Strike</button>
+                <button class="tool-btn" data-tool="meteor">☄️ Meteor Swarm</button>
+            </div>
+            <div class="instructions">
+                Right-Click + Drag to Pan<br>
+                Scroll Wheel to Zoom
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&display=swap');
+
+body, html {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    overflow: hidden; background: #000;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+#game-container {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
+}
+
+#ui-layer {
+    position: absolute; top: 20px; left: 20px; z-index: 10; pointer-events: none;
+}
+
+.panel {
+    background: rgba(10, 15, 30, 0.85); backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 12px;
+    padding: 20px; color: #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    pointer-events: auto; width: 220px;
+}
+
+h1 { margin: 0 0 5px 0; font-size: 18px; font-weight: 900; color: #00e5ff; text-transform: uppercase; letter-spacing: 1px; }
+p { margin: 0 0 20px 0; font-size: 11px; color: #8da3b8; font-weight: 800; }
+
+.tools { display: flex; flex-direction: column; gap: 10px; }
+
+button {
+    background: #1a233a; border: 1px solid #2a3b5c; color: #e2e8f0;
+    padding: 12px 16px; border-radius: 6px; font-size: 13px; font-weight: 800;
+    cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center;
+}
+
+button:hover { background: #2a3b5c; transform: translateX(5px); }
+button.active { background: #00e5ff; border-color: #00e5ff; color: #000; box-shadow: 0 0 15px rgba(0, 229, 255, 0.5); }
+
+.instructions { margin-top: 20px; font-size: 10px; color: #64748b; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; }
